@@ -12,37 +12,33 @@ and push to your github repository.
 
 1. Derive asymptotic upper bounds of work for each recurrence below.
   * $W(n)=2W(n/3)+1$
-.  
-.  
-.  
-.  
+a = 2, b =3, f(n) = 1
+log3^2 is between 0 and 1 so we use f(n)=O(nlog^b a−ϵ) for any ϵ>0.
+W(n) is O(n^log_3 2)   
 .  
   * $W(n)=5W(n/4)+n$
-.  
+  a = 5, b = 4 f(n) = n
+log_4 5 is between 1 and 2
+since f(n) = n we can use case 1 of the master theorem W(n)=Θ(nlog b a) so W(n) = O(n log_4 5)
 .  
 .  
 .  
 .  
   * $W(n)=7W(n/7)+n$
-.  
-.  
-.  
-.  
+a=7, b=7, f(n) = n log_7 7 = 1 =n^1 = n since f(n) = nlog_b a, W(n) = 0(n log n) .
+
 .  
   * $W(n)=9W(n/3)+n^2$
-.  
-.  
-.  
+a = 9, b =3 f(n) = n^2 log_9 3 = 2, so nlog_b a = n^2 since f(n) = n^log_b a, W(n) = O(n^2) . 
 .  
 .  
   * $W(n)=8W(n/2)+n^3$
-.  
-.  
+a = 8, b = 2 f(n) = n^3, n^ log_2 8 = 3, since f(n) = n^log_b a, W(n) = n^3 .
 .  
 .  
 .  
   * $W(n)=49W(n/25)+n^{3/2}\log n$
-.  
+
 .  
 .  
 .  
