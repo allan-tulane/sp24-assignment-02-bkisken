@@ -46,9 +46,21 @@ def pad(x,y):
 
 
 def subquadratic_multiply(x, y):
-    ### TODO
-    pass
-    ###
+    n = len(x)
+
+    if n == 1:
+        return str(int(x[0]) * int(y[0]))
+
+    x_L, x_R = split_number(x)
+    y_L, y_R = split_number(y)
+
+    x_Ly_L = subquadratic_multiply(x_L, y_L)
+    x_Ly_R = subquadratic_multiply(x_L, y_R)
+    x_Ry_L = subquadratic_multiply(x_R, y_L)
+
+    result = bit_shift(x_Ly_L, n) + bit_shift(add_binary(x_Ly_R, x_Ry_L), n // 2) + x_Ry_L
+
+    return result
 
 
 
@@ -59,4 +71,3 @@ def time_multiply(x, y, f):
 
     
     
-
