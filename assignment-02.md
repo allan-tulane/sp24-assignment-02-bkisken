@@ -72,8 +72,10 @@ W(n)=W(2)+log 2(log 2 n), so W(n) = O(log n)
 
     What are the asymptotic running times of each of these algorithms?
     Which algorithm would you choose?
-
-I would choose 
+A. W(n) E O(n^log_2 ^5)
+B. W(n) E O(2^n)
+C. W(n) E O(n^2logn)
+I would choose algorithm C as it is less than the other two algorithms for a large n which means its the most efficent.
 
 3. Now that you have some practice solving recurrences, let's work on
   implementing some algorithms. In lecture we discussed a divide and
